@@ -1,7 +1,5 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-var Promise = require('bluebird');
-mongoose.Promise = Promise;
 
 var metadataSchema = new Schema({
     gateway:  {type: Schema.Types.ObjectId, ref: "LoraGateway"},
