@@ -25,7 +25,8 @@ var messageSchema = new Schema ({
     port: Number,
     counter: Number,
     dev_eui: String,
-    metadata: [metadataSchema]
+    metadata: [metadataSchema],
+    fields: {}
 });
 
 var gatewaySchema = new Schema ({
