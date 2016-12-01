@@ -38,10 +38,17 @@ var gatewaySchema = new Schema ({
     longitude: Number
 });
 
+var deviceSchema = new Schema ({
+    dev_eui: String,
+    last_message: Date,
+    number_of_messages: Number
+});
+
 var messageLogSchema = new Schema({
     message: messageSchema
 }, {capped: { size: 10240, max: 10, autoIndexId: true}});
 
 module.exports.Message = messageSchema;
 module.exports.MessageLog = messageLogSchema;
+module.exports.Device = deviceSchema;
 module.exports.Gateway = gatewaySchema;
